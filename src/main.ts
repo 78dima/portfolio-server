@@ -14,18 +14,6 @@ const start = async () => {
       credentials: true,
     });
     app.useGlobalPipes(new ValidationPipe());
-    app.use((req, res, next) => {
-      res.header('Access-Control-Allow-Origin', 'https://www.78dima.com');
-      res.header(
-        'Access-Control-Allow-Methods',
-        'GET,HEAD,PUT,PATCH,POST,DELETE',
-      );
-      res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept',
-      );
-      next();
-    });
 
     await app.listen(PORT, () => console.log('Server starts on ', PORT));
   } catch (e) {
