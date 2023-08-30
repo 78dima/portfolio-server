@@ -8,9 +8,14 @@ const start = async () => {
     const app = await NestFactory.create(AppModule);
     app.enableCors({
       origin: ['https://www.78dima.com', 'https://www.api.78dima.com'],
-      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-      allowedHeaders:
-        'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, Observe',
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+      allowedHeaders: [
+        'X-Requested-With',
+        'X-HTTP-Method-Override',
+        'Content-Type',
+        'Accept',
+        'Observe',
+      ],
       credentials: true,
     });
     app.useGlobalPipes(new ValidationPipe());
