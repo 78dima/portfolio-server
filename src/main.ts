@@ -7,7 +7,8 @@ const start = async () => {
     const PORT = process.env.PORT || 8000;
     const app = await NestFactory.create(AppModule);
     app.enableCors({
-      origin: 'https://www.78dima.com',
+      origin: ['https://www.78dima.com', 'https://www.api.78dima.com'],
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       credentials: true,
     });
     app.useGlobalPipes(new ValidationPipe());
