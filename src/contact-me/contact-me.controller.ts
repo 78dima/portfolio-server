@@ -8,7 +8,7 @@ import { AtGuard } from 'src/common/guards/at.guard';
 export class ContactMeController {
   constructor(private contactMeService: ContactMeService) {}
 
-  @UseGuards(AtGuard)
+  @Public()
   @Post()
   create(@Body() dto: CreateContactmeDto) {
     return this.contactMeService.createMessage(dto);
