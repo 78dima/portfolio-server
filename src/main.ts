@@ -10,6 +10,7 @@ const start = async () => {
       origin: [
         'https://www.78dima.com',
         'https://www.api.78dima.com',
+        'https://www.api.78dima.com/api',
         'https://localhost:3000',
       ],
       methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
