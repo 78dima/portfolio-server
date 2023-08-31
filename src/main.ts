@@ -7,7 +7,11 @@ const start = async () => {
     const PORT = process.env.PORT || 8000;
     const app = await NestFactory.create(AppModule);
     app.enableCors({
-      origin: ['https://www.78dima.com', 'https://www.api.78dima.com'],
+      origin: [
+        'https://www.78dima.com',
+        'https://www.api.78dima.com',
+        'https://localhost:3000',
+      ],
       methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
       allowedHeaders: [
         'X-Requested-With',
