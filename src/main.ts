@@ -12,6 +12,7 @@ const start = async () => {
         'https://www.78dima.com',
         'http://localhost:3000',
       ],
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       credentials: true,
     });
     app.useGlobalPipes(new ValidationPipe());
